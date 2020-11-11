@@ -6,6 +6,7 @@ from django.shortcuts import redirect
 from hello.forms import LogMessageForm
 from hello.models import LogMessage
 from django.views.generic import ListView
+from PIL import Image
 
 class HomeListView(ListView):
     """Renders the home page, with a list of all messages."""
