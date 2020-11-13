@@ -1,0 +1,59 @@
+{% extends "hello/layout.html" %},
+	{% block title %}
+    About us
+	{% endblock %},
+	{% block content %}
+	<body onload="onLoad()"> 
+    
+	<img style=style.prof width=100 height=130 src="/static/hello/images/chrisphoto.jpg">
+	<p>Hello! My name is Christopher Demos. I am a software and electrical engineer.</p>
+	
+	<div style="width:300px; height:100px; justify-content:center; border-style:solid;">
+		<p style="display:block; margin-left:auto; margin-right:auto;">My Resume</p>
+		<button id="viewBtn" onclick="myFunction()"></button>
+		<a href="/static/hello/media/ChristopherDemosResume.pdf" download>
+			<button>
+				Download
+				<img src="/static/hello/images/downarrow.png" width=15 height=10>
+			</button>
+		</a>
+	</div>
+	<p id="demo"></p>
+	<embed 
+		id="pdfView" 
+		style="
+			box-shadow: 0 0 0 1000px rgba(0,0,0,.3);
+			box-shadow: 0 0 0 100vmax rgba(0,0,0,.3);
+			margin-left: auto; 
+			margin-right: auto; 
+			display:none;" 
+		width="500px" 
+		height="600px" 
+	/>
+
+	<script>
+		function myFunction() {
+			var pdfView = document.getElementById("pdfView");
+			var viewBtn = document.getElementById("viewBtn");
+			var viewDisplay = pdfView.style.display;
+			var textView = document.getElementById("demo");
+			if(viewDisplay == "block") {
+				viewBtn.innerHTML="View";
+				pdfView.style.display = "none";
+			}
+			else {
+				viewBtn.innerHTML="Close";
+				pdfView.style.display="block";
+				pdfView.src = "/static/hello/media/ChristopherDemosResume.pdf";
+			}
+  			var x = screen.width;
+			pdfView.left = "" + x*0.15 + "px";
+			pdfView.width = "" + x*0.7 + "px";
+		}
+		function onLoad () {
+			var viewBtn = document.getElementById("viewBtn");
+			viewBtn.innerHTML = "View";
+		}
+	</script>
+	
+	{% endblock %} 
