@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<img id="blueSquare" style="z-index:1; margin-bottom:11px; margin-right:-18px;" src="/static/hello/images/blue-square.png" width=408 height=73/>
+	<img id="chrissign" style="z-index:-1;" src="/static/hello/images/chris-sign2.png" width=408 height=96/>
+	<img id="blueSquare2" style="margin-bottom:11px; margin-left:-15px;" src="/static/hello/images/blue-square.png" width=408 height=73/>
     <meta charset="utf-8"/>
     <title>{% block title %}{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'hello/site.css' %}"/>
 </head>
 
-<body>
+<body onload="onLoad()" onresize="onResize()">
 <div class="navbar">
     <a href="{% url 'home' %}" class="navbar-item">Home</a>
     <a href="{% url 'log' %}" class="navbar-item">Log Message</a>
@@ -23,5 +26,25 @@
         <p>Made by Christopher Demos © 2020</p>
     </footer>
 </div>
+
+<script>
+    window.addEventListener("resize", onResize);
+		function onLoad () {
+            resizeTopBar();
+		}
+		function onResize () {
+            resizeTopBar();
+		}
+        function resizeTopBar () {
+            var x = screen.width;
+            var w = window.outerWidth;
+            var h = window.outerHeight;
+			var chrissign = document.getElementById("chrissign");
+			var blueSquare = document.getElementById("blueSquare");
+			var blueSquare2 = document.getElementById("blueSquare2");
+			blueSquare.width = (w-chrissign.width)*0.43;
+			blueSquare2.width = (w-chrissign.width)*0.43;
+        }
+</script>
 </body>
 </html>

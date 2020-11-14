@@ -4,6 +4,7 @@
 	{% endblock %},
 	{% block content %}
 	<body onload="onLoad()"> 
+
     
 	<img style=style.prof width=100 height=130 src="/static/hello/images/chrisphoto.jpg">
 	<p>Hello! My name is Christopher Demos. I am a software and electrical engineer.</p>
@@ -11,10 +12,10 @@
 	<div style="width:300px; height:100px; justify-content:center; border-style:solid;">
 		<p style="display:block; margin-left:auto; margin-right:auto;">My Resume</p>
 		<button id="viewBtn" onclick="myFunction()"></button>
-		<a href="/static/hello/media/ChristopherDemosResume.pdf" download>
+		<a href="/static/hello/media/ChristopherDemosResume2.pdf" download>
 			<button>
 				Download
-				<img src="/static/hello/images/downarrow.png" width=15 height=10>
+				<img src="/static/hello/images/download-ico.png" width=15 height=15>
 			</button>
 		</a>
 	</div>
@@ -44,7 +45,7 @@
 			else {
 				viewBtn.innerHTML="Close";
 				pdfView.style.display="block";
-				pdfView.src = "/static/hello/media/ChristopherDemosResume.pdf";
+				pdfView.src = "/static/hello/media/ChristopherDemosResume2.pdf";
 			}
   			var x = screen.width;
 			pdfView.left = "" + x*0.15 + "px";
@@ -55,4 +56,5 @@
 			viewBtn.innerHTML = "View";
 		}
 	</script>
+	</body>
 	{% endblock %} 
