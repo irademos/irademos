@@ -7,5 +7,5 @@
 ### 🔭 I’m currently working on a website that showcases software design in python.
 ### 🌱 I’m currently learning python and machine learning.
 ### 💬 Ask me about anything!
-### 📫 How to reach me: irademos@gmail.com
+### 📫 How to reach me: christopher.i.demos@gmail.com
 ### 😄 Pronouns: He/Him
