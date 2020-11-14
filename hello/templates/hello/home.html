@@ -3,11 +3,6 @@
     Home
 {% endblock %}
 {% block content %}
-    <form method="POST" class="log-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Log</button>
-    </form>
     <h2>Logged messages</h2>
     {% if message_list %}
     
