@@ -1,1 +1,1 @@
-web: gunicorn Untitled.wsgi --log-file -
+web: gunicorn irademos.wsgi --log-file -
