@@ -21,6 +21,10 @@ def about(request):
 def contact(request):
     return render(request, "hello/contact.html")
 
+def game(request):
+    # return render(request, "hello/index.html")
+    return render(request, "hello/game.html")
+
 
 def hello_there(request, name):
     return render(

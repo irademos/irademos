@@ -1,0 +1,28 @@
+{% extends "hello/layout.html" %}
+{% load static %}
+{% block title %}
+    Game
+{% endblock %}
+{% block content %}
+    <h2>Putting game here</h2>
+    <div style="width: 960px; height: 600px">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Conference-Space</title>
+    <link rel="shortcut icon" href="{% static 'Unity/TemplateData/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'Unity/TemplateData/style.css' %}">
+    <script src="{% static 'Unity/TemplateData/UnityProgress.js' %}"></script>
+    <script src="{% static 'Unity/Build/UnityLoader.js' %}"></script>
+    <script>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "{% static 'Unity/Build/Build1.json' %}", {onProgress: UnityProgress});
+    </script>
+    <div class="webgl-content">
+      <div id="unityContainer" style="top: 220px; left: 0px; width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Conference-Space</div>
+      </div>
+    </div>
+    </div>
+{% endblock %}
