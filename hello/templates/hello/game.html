@@ -14,7 +14,7 @@
     <script src="{% static 'Unity/TemplateData/UnityProgress.js' %}"></script>
     <script src="{% static 'Unity/Build/UnityLoader.js' %}"></script>
     <script>
-        var unityInstance = UnityLoader.instantiate("unityContainer", "{% static 'Unity/Build/Build1.json' %}", {onProgress: UnityProgress});
+        var unityInstance = UnityLoader.instantiate("unityContainer", "{% static 'Unity/Build/multiBuildWeb.json' %}", {onProgress: UnityProgress});
     </script>
     <div class="webgl-content">
       <div id="unityContainer" style="top: 220px; left: 0px; width: 960px; height: 600px"></div>
