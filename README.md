@@ -7,7 +7,9 @@
 Welcome to My GitHub Repository! 👋
 
 Hi, I’m irademos. Below is a collection of projects I've worked on, spanning various domains like embedded systems, AI tools, game development, and software utilities. Feel free to explore, contribute, or use them as inspiration!
+
 📂 Projects
+
 🚤 BoatSWR
 
     Description: Software for managing and controlling outboard motor systems, focusing on layered architecture and adaptive controls.
